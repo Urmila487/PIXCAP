@@ -1,0 +1,23 @@
+/// <reference types="Cypress" />
+
+describe(' Mouse click Marina Bay Sands Singapore from the map to select it', () => {
+    const time = 1000
+    it('Access main screen', () => {
+        cy.visit('https://www.google.com/?&hl=en-GB');
+        cy.get('button').contains('I agree').click()
+        cy.visit('https://www.google.com/maps/place/Gardens+by+the+Bay/@1.2815683,103.8614245,17z/data=!3m1!4b1!4m5!3m4!1s0x31da1904937e1633:0x62099677b59fca76!8m2!3d1.2815683!4d103.8636132')
+        cy.get('body')
+            .trigger('mouseover', 461, 85, 'topLeft',{ button: 0 })
+            .wait(2000)
+            .click( 461, 85, 'topLeft')
+            .wait(2000)
+    
+        
+        
+        
+     })
+        
+        
+})
+    
+
